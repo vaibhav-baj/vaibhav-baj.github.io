@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publications · Vaibhav Bajpai</title>
+  <meta name="description" content="Publications by Vaibhav Bajpai: a public Lean benchmark of ten scalable challenges in combinatorics, a Lean 4 formalisation of the proof of the Cycle Double Cover Conjecture, and a Master's thesis on automated theorem proving.">
+  <meta property="og:title" content="Publications · Vaibhav Bajpai">
+  <meta property="og:image" content="https://vaibhav-baj.github.io/assets/VB.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cmunrm.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <a class="brand" href="index.html"><span class="qed" aria-hidden="true"></span>Vaibhav Bajpai</a>
+    <nav aria-label="Main">
+      <ul class="header-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html" aria-current="page">Publications</a></li>
+        <li><a href="research.html">Research Collaboration</a></li>
+        <li><a href="author-editor.html">Author &amp; Editor</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a class="btn btn-small" href="mailto:vaibhav.bajpai@math.tu-freiberg.de">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="page-intro">
+      <h1>Publications</h1>
+      <p>
+        Papers on combinatorics formalised in Lean&nbsp;4, and my Master’s thesis on automated theorem proving.
+        Lean code and preprints are linked where they are public.
+      </p>
+      <ul class="subnav">
+        <li><a href="#papers">Papers</a></li>
+        <li><a href="#thesis">Master’s thesis</a></li>
+      </ul>
+    </section>
+
+    <h2 class="rule" id="papers">Papers</h2>
+    <ol class="pubs">
+      <li class="pub" id="ten-challenges">
+        <span class="pub-num">[1]</span>
+        <div>
+          <p class="pub-title">10 Scalable Challenges in Combinatorics: A Public Benchmark Formalised in Lean</p>
+          <p class="pub-authors"><b>Vaibhav Bajpai</b>, Nathan Bowler, Johannes Carmesin, Utku Okur</p>
+          <p class="pub-venue">Extended abstract, <i>AI4Math workshop at CICM 2026</i>, Ljubljana; informal proceedings.</p>
+          <div class="pub-links">
+            <a class="btn btn-small btn-secondary" href="https://tenchallenges.github.io/ten-challenges/">Benchmark site ↗</a>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub" id="cycle-double-cover">
+        <span class="pub-num">[2]</span>
+        <div>
+          <p class="pub-title">A Lean 4 Formalisation of OpenAI’s Proof of the Cycle Double Cover Conjecture</p>
+          <p class="pub-authors"><b>Vaibhav Bajpai</b>, Johannes Carmesin, Utku Okur</p>
+          <p class="pub-venue">
+            Lean code: <a href="https://github.com/utkuokur/CDC_lean">GitHub</a>,
+            <a href="https://doi.org/10.5281/zenodo.21410822">doi:10.5281/zenodo.21410822</a>.
+          </p>
+          <p class="pub-note">
+            See also J. Carmesin, <a href="#ten-challenges">10 Scalable Challenges in Combinatorics: A Public Benchmark Formalised in Lean</a>.
+          </p>
+          <div class="pub-links">
+            <a class="btn btn-small" href="https://drive.google.com/file/d/1efSjU8drMLf3so-KEOsWNNSGDHcYFgAx/view?usp=sharing">Preprint ↗</a>
+            <a class="btn btn-small btn-secondary" href="https://github.com/utkuokur/CDC_lean">Lean code ↗</a>
+            <a class="btn btn-small btn-secondary" href="https://doi.org/10.5281/zenodo.21410822">Zenodo ↗</a>
+          </div>
+          <div class="code-block">
+            <pre><code data-lean>theorem CDC_multi {W : Type*} {E : Type*}
+  [DecidableEq W] [Finite W] [Fintype E]
+    {G : Multigraph W E} (hb : G.Bridgeless) :
+    ∃ (n : ℕ) (C : Fin n → E → ZMod 2), G.IsCycleDoubleCover C := by
+  classical
+  letI : Fintype W := Fintype.ofFinite W
+  refine G.exists_isCycleDoubleCover_of_forall_cubic ?_ hb
+  intro W' _ _ G' _ hcubic hbG
+  obtain ⟨n, C, hC⟩ := G'.exists_cycleDoubleCover hcubic hbG
+  exact ⟨n, C, G'.isCycleDoubleCover_toMultigraph hC⟩</code></pre>
+          </div>
+          <p class="code-caption">The final theorem of the formalisation, for every finite bridgeless multigraph (CDC/CDC_multigraph/Main_multi.lean). It depends only on Lean’s standard axioms.</p>
+        </div>
+      </li>
+    </ol>
+
+    <h2 class="rule" id="thesis">Master’s thesis</h2>
+    <ol class="pubs">
+      <li class="pub">
+        <span class="pub-num">[T]</span>
+        <div>
+          <p class="pub-title">Automated Theorem Proving for INMO: A Hybrid Framework for Combining Neural and Symbolic Reasoning</p>
+          <p class="pub-authors"><b>Vaibhav Bajpai</b></p>
+          <p class="pub-venue">Master’s thesis, M.Tech. in Artificial Intelligence &amp; Machine Learning, BITS Pilani · August 2025.</p>
+          <div class="pub-links">
+            <a class="btn btn-small" href="https://drive.google.com/file/d/1juShZ8_H5sS139LVb94e1yvSPBykTUjm/view?usp=drive_link">Thesis PDF ↗</a>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year>2026</span> Vaibhav Bajpai · TU Bergakademie Freiberg</span>
+    <nav aria-label="Footer">
+      <a href="mailto:vaibhav.bajpai@math.tu-freiberg.de">Email</a>
+      <a href="https://github.com/vaibhav-baj">GitHub</a>
+      <a href="https://www.linkedin.com/in/vaibhavbaj">LinkedIn</a>
+    </nav>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Collaboration · Vaibhav Bajpai</title>
+  <meta name="description" content="QEDAI, QEDSoft, Quantum_QED and AxiomVest: research prototypes that combine AI, simulation and statistical models with a Lean 4 verification layer.">
+  <meta property="og:title" content="Research Collaboration · Vaibhav Bajpai">
+  <meta property="og:image" content="https://vaibhav-baj.github.io/assets/VB.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cmunrm.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <a class="brand" href="index.html"><span class="qed" aria-hidden="true"></span>Vaibhav Bajpai</a>
+    <nav aria-label="Main">
+      <ul class="header-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="research.html" aria-current="page">Research Collaboration</a></li>
+        <li><a href="author-editor.html">Author &amp; Editor</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a class="btn btn-small" href="mailto:vaibhav.bajpai@math.tu-freiberg.de">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="page-intro">
+      <h1>Research Collaboration</h1>
+      <p>
+        Four research prototypes I work on in collaboration. Each combines AI, simulation or statistical models
+        with a Lean&nbsp;4 verification layer, so that its results come with machine-checked evidence that people
+        can audit.
+      </p>
+      <ul class="subnav">
+        <li><a href="#qedai">QEDAI</a></li>
+        <li><a href="#qedsoft">QEDSoft</a></li>
+        <li><a href="#quantum-qed">Quantum_QED</a></li>
+        <li><a href="#axiomvest">AxiomVest</a></li>
+      </ul>
+    </section>
+
+    <!-- ============ QEDAI ============ -->
+    <article class="project reveal" id="qedai">
+      <div class="project-visual">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="70" y="4" width="60" height="22"/>
+            <path d="M78,12H122M78,19H108" stroke-opacity=".4"/>
+            <path d="M100,26V40"/>
+            <path d="M100,44L44,76M100,44L100,76M44,76L22,108M44,76L62,108M100,76L86,108M100,76L114,108M156,76L140,108" stroke-opacity=".35"/>
+          </g>
+          <path d="M100,44L156,76L176,108V122" fill="none" stroke="#9b1c1c" stroke-width="1.6"/>
+          <g fill="currentColor">
+            <circle cx="44" cy="76" r="3" fill-opacity=".4"/><circle cx="100" cy="76" r="3" fill-opacity=".4"/>
+            <circle cx="22" cy="108" r="2.6" fill-opacity=".3"/><circle cx="62" cy="108" r="2.6" fill-opacity=".3"/>
+            <circle cx="86" cy="108" r="2.6" fill-opacity=".3"/><circle cx="114" cy="108" r="2.6" fill-opacity=".3"/>
+            <circle cx="140" cy="108" r="2.6" fill-opacity=".3"/>
+            <circle cx="100" cy="44" r="3.6"/><circle cx="156" cy="76" r="3.6"/><circle cx="176" cy="108" r="3.6"/>
+          </g>
+          <rect x="170" y="122" width="12" height="12" fill="#9b1c1c"/>
+        </svg>
+      </div>
+      <div class="project-body">
+        <p class="label">Automated theorem proving</p>
+        <h2>QEDAI</h2>
+        <p class="project-sub">From natural-language mathematics to Lean&nbsp;4–verified proofs.</p>
+        <p>
+          QEDAI is a research prototype for converting natural-language mathematical statements into
+          Lean&nbsp;4–verified proofs. It combines language models with proof planning, Mathlib retrieval,
+          parallel proof search, convergence matching, Pareto-based candidate selection, and verifier-guided
+          repair to explore more reliable and transparent automated theorem proving.
+        </p>
+        <ul class="chips">
+          <li>Proof planning</li><li>Mathlib retrieval</li><li>Parallel proof search</li>
+          <li>Convergence matching</li><li>Pareto-based selection</li><li>Verifier-guided repair</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ============ QEDSOFT ============ -->
+    <article class="project reveal" id="qedsoft">
+      <div class="project-visual">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="60" y="30" width="80" height="80"/>
+            <path d="M46,46H60M46,62H60M46,78H60M46,94H60M140,46H154M140,62H154M140,78H154M140,94H154"/>
+            <path d="M76,16V30M92,16V30M108,16V30M124,16V30M76,110V124M92,110V124M108,110V124M124,110V124"/>
+            <rect x="68" y="38" width="64" height="64" stroke-opacity=".3"/>
+          </g>
+          <path d="M72,82H82V58H96V82H108V58H122V82H128" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M150,110l7,7l15,-17" fill="none" stroke="#9b1c1c" stroke-width="2.6"/>
+        </svg>
+      </div>
+      <div class="project-body">
+        <p class="label">Hardware verification</p>
+        <h2>QEDSoft</h2>
+        <p class="project-sub">RTL, golden models and requirements in one Lean&nbsp;4 semantic model.</p>
+        <p>
+          QEDSoft is a research prototype that formalizes supported SystemVerilog RTL, MATLAB golden models, and
+          natural-language requirements into a shared Lean&nbsp;4 semantic model. It represents hardware behavior
+          as explicit fixed-width transition semantics, supporting kernel-checked RTL-to-model equivalence and
+          specification-property analysis. Alongside generated SVA checkers and bind files for standard simulation
+          and formal-verification flows, QEDSoft provides auditable evidence and fail-closed diagnostics whenever a
+          complete formal interpretation cannot be established.
+        </p>
+        <ul class="chips">
+          <li>SystemVerilog RTL</li><li>MATLAB golden models</li><li>Natural-language requirements</li>
+          <li>RTL-to-model equivalence</li><li>SVA checkers and bind files</li><li>Fail-closed diagnostics</li>
+        </ul>
+        <div class="project-actions">
+          <a class="btn" href="https://qedai-frontend.vercel.app/">Open QEDSoft ↗</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- ============ QUANTUM_QED ============ -->
+    <article class="project reveal" id="quantum-qed">
+      <div class="project-visual">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-opacity=".35">
+            <path d="M30,22H170M30,54H170M30,86H170M30,118H170"/>
+            <path d="M30,22V118M65,22V118M100,22V118M135,22V118M170,22V118"/>
+          </g>
+          <rect x="86" y="40" width="63" height="28" rx="14" fill="none" stroke="#9b1c1c" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <path d="M100,54H135" stroke="#9b1c1c" stroke-width="2.2"/>
+          <g fill="currentColor">
+            <circle cx="30" cy="22" r="3"/><circle cx="65" cy="22" r="3"/><circle cx="100" cy="22" r="3"/><circle cx="135" cy="22" r="3"/><circle cx="170" cy="22" r="3"/>
+            <circle cx="30" cy="54" r="3"/><circle cx="65" cy="54" r="3"/><circle cx="170" cy="54" r="3"/>
+            <circle cx="30" cy="86" r="3"/><circle cx="65" cy="86" r="3"/><circle cx="100" cy="86" r="3"/><circle cx="135" cy="86" r="3"/><circle cx="170" cy="86" r="3"/>
+            <circle cx="30" cy="118" r="3"/><circle cx="65" cy="118" r="3"/><circle cx="100" cy="118" r="3"/><circle cx="135" cy="118" r="3"/><circle cx="170" cy="118" r="3"/>
+          </g>
+          <circle cx="100" cy="54" r="3.8" fill="#9b1c1c"/><circle cx="135" cy="54" r="3.8" fill="#9b1c1c"/>
+        </svg>
+      </div>
+      <div class="project-body">
+        <p class="label">Quantum error correction</p>
+        <h2>Quantum_QED</h2>
+        <p class="project-sub">Proof-carrying quantum recovery.</p>
+        <p>
+          Quantum_QED is a research prototype for assessing how reliably quantum error-correcting codes and
+          decoders handle noise. Its Lean&nbsp;4 verification layer checks certificates that bound decoder failure
+          probabilities under clearly specified noise assumptions, making the guarantees and their limits easier
+          to audit. Simulation and published hardware data provide additional evidence for evaluating the approach.
+        </p>
+        <ul class="chips">
+          <li>Error-correcting codes</li><li>Decoders</li><li>Failure-probability certificates</li>
+          <li>Explicit noise assumptions</li><li>Simulation</li><li>Published hardware data</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ============ AXIOMVEST ============ -->
+    <article class="project reveal" id="axiomvest">
+      <div class="project-visual">
+        <svg viewBox="0 0 200 140" aria-hidden="true">
+          <polygon points="20,40 190,30 190,82 20,92" fill="#eeeeee"/>
+          <g fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M20,40L190,30M20,92L190,82" stroke-dasharray="4 3" stroke-opacity=".6"/>
+            <path d="M20,8V124H192"/>
+          </g>
+          <polyline points="24,70 44,60 64,66 84,52 104,58 124,46 144,54 164,44 184,50" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <circle cx="184" cy="50" r="7" fill="none" stroke="#9b1c1c" stroke-width="1.2"/>
+          <circle cx="184" cy="50" r="3.6" fill="#9b1c1c"/>
+        </svg>
+      </div>
+      <div class="project-body">
+        <p class="label">Portfolio risk</p>
+        <h2>AxiomVest</h2>
+        <p class="project-sub">Portfolio proposals checked against policy rules in Lean&nbsp;4.</p>
+        <p>
+          AxiomVest is a research prototype that combines market data, statistical models, and portfolio
+          optimization to help brokers monitor client portfolios and identify risks. Lean&nbsp;4 formally verifies
+          allocation proposals against defined policy rules before broker review, making each proposal traceable
+          to its inputs and constraints.
+        </p>
+        <ul class="chips">
+          <li>Market data</li><li>Statistical models</li><li>Portfolio optimization</li>
+          <li>Policy rules in Lean&nbsp;4</li><li>Broker review</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year>2026</span> Vaibhav Bajpai · TU Bergakademie Freiberg</span>
+    <nav aria-label="Footer">
+      <a href="mailto:vaibhav.bajpai@math.tu-freiberg.de">Email</a>
+      <a href="https://github.com/vaibhav-baj">GitHub</a>
+      <a href="https://www.linkedin.com/in/vaibhavbaj">LinkedIn</a>
+    </nav>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

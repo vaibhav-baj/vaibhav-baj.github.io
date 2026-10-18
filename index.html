@@ -3,116 +3,188 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Vaibhav Bajpai - PhD researcher in Graph Theory, Graph Neural Networks, and formalized mathematics at TU Bergakademie Freiberg.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2250%22 fill=%22%2314221d%22/><text x=%2250%22 y=%2264%22 text-anchor=%22middle%22 font-size=%2242%22 fill=%22%23d2f45c%22>VB</text></svg>">
-  <title>Vaibhav Bajpai | Mathematics & AI Research</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>Vaibhav Bajpai — Combinatorics, Lean 4 and AI</title>
+  <meta name="description" content="Vaibhav Bajpai is a PhD student at the Institute of Discrete Mathematics and Algebra, TU Bergakademie Freiberg, working with Prof. Johannes Carmesin on combinatorics, Lean 4 and AI.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vaibhav Bajpai — Combinatorics, Lean 4 and AI">
+  <meta property="og:description" content="PhD student at the Institute of Discrete Mathematics and Algebra, TU Bergakademie Freiberg.">
+  <meta property="og:image" content="https://vaibhav-baj.github.io/assets/VB.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cmunrm.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="site-header wrap">
-    <a class="brand" href="index.html"><span>VB</span> Vaibhav Bajpai</a>
-    <button class="menu-button" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
-    <nav class="nav">
-      <a class="active" href="index.html">Introduction</a>
-      <a href="work.html">Work &amp; writing</a>
-      <a class="nav-button" href="mailto:vaibhavkubic@gmail.com">Contact</a>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <a class="brand" href="index.html"><span class="qed" aria-hidden="true"></span>Vaibhav Bajpai</a>
+    <nav aria-label="Main">
+      <ul class="header-nav">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="research.html">Research Collaboration</a></li>
+        <li><a href="author-editor.html">Author &amp; Editor</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a class="btn btn-small" href="mailto:vaibhav.bajpai@math.tu-freiberg.de">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero wrap">
-      <div class="hero-copy">
-        <p class="kicker">PhD Researcher · TUBAF</p>
-        <h1>Mathematics,<br><em>made formal.</em></h1>
-        <p class="lead">I’m Vaibhav Bajpai, pursuing a PhD at TU Bergakademie Freiberg (TUBAF). My research lies at the intersection of <strong>Graph Theory</strong>, <strong>Graph Neural Networks</strong>, and formal mathematics.</p>
-        <div class="hero-links">
-          <a class="primary-button" href="work.html">Explore my work <span>↗</span></a>
-          <a class="text-button" href="#research">Current research ↓</a>
+  <main id="main">
+    <!-- ============ INTRO ============ -->
+    <section class="intro">
+      <div>
+        <p class="eyebrow">PhD student · TU Bergakademie Freiberg</p>
+        <h1>Vaibhav Bajpai</h1>
+        <p class="tagline">Combinatorics, <em>Lean&nbsp;4</em> and AI.</p>
+        <p class="lede">
+          I am a PhD student at the Institute of Discrete Mathematics and Algebra at TU Bergakademie Freiberg,
+          Germany. I work with Prof. Johannes Carmesin. I am involved in various projects on combinatorics,
+          Lean&nbsp;4 and AI.
+        </p>
+        <div class="ctas">
+          <a class="btn" href="publications.html">Publications →</a>
+          <a class="btn btn-secondary" href="research.html">Research collaboration →</a>
         </div>
+        <p class="inst">Institute of Discrete Mathematics and Algebra · Freiberg, Germany</p>
       </div>
-      <div class="portrait-column">
-        <div class="portrait"><img src="assets/vaibhav-bajpai.jpeg" alt="Vaibhav Bajpai"></div>
-        <div class="portrait-note"><i></i><span>Research Assistant<br><strong>TU Bergakademie Freiberg</strong></span></div>
-      </div>
+
+      <figure class="portrait">
+        <img src="assets/VB.png" width="676" height="652" alt="Portrait of Vaibhav Bajpai">
+        <figcaption><span>Vaibhav Bajpai</span><span>TU Bergakademie Freiberg</span></figcaption>
+      </figure>
     </section>
 
-    <section class="research-band" id="research">
+    <dl class="stats">
+      <div><dt>publications on Lean formalisation</dt><dd>2</dd></div>
+      <div><dt>scalable challenges in a public Lean benchmark</dt><dd>10</dd></div>
+      <div><dt>research prototypes with Lean&nbsp;4 verification</dt><dd>4</dd></div>
+      <div><dt>books authored and edited</dt><dd>3</dd></div>
+    </dl>
+
+    <!-- ============ INTERESTS ============ -->
+    <section class="section soft">
       <div class="wrap">
-        <p class="section-number">01 / Current research</p>
-        <div class="research-intro">
-          <h2>From a mathematical statement<br>to a machine-checked proof.</h2>
-          <p>My current work explores how advanced mathematics can be represented, translated, and verified with modern formal systems.</p>
-        </div>
-        <div class="research-grid">
-          <article class="research-card">
-            <div class="card-top"><span>ProofBench</span><b>01</b></div>
-            <div class="graph-mark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><svg viewBox="0 0 220 130"><path d="M25 80 L80 25 L140 55 L195 20 M80 25 L105 110 L195 20 M25 80 L105 110 L140 55"/></svg></div>
-            <h3>Formalizing research-level Graph Theory</h3>
-            <p>Formalizing graph theory research papers in Lean 4 with kernel-verified, machine-checkable proofs.</p>
+        <header class="section-head reveal">
+          <p class="label">Research interests</p>
+          <h2>Combinatorics, formal proof and AI</h2>
+          <p>
+            My projects sit where these three areas meet: stating combinatorial results precisely in Lean&nbsp;4,
+            proving them, and building AI systems whose output the Lean kernel can check.
+          </p>
+        </header>
+
+        <div class="pillars reveal">
+          <article class="pillar">
+            <svg viewBox="0 0 120 84" preserveAspectRatio="xMinYMid meet" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <polygon points="42,6 77,31 64,72 20,72 7,31"/>
+                <polygon points="42,24 59,36 52,56 32,56 25,36"/>
+                <path d="M42,6V24M77,31L59,36M64,72L52,56M20,72L32,56M7,31L25,36"/>
+                <path d="M42,24L52,56L25,36L59,36L32,56Z" stroke-opacity=".35"/>
+              </g>
+              <g fill="currentColor">
+                <circle cx="42" cy="6" r="3"/><circle cx="77" cy="31" r="3"/><circle cx="64" cy="72" r="3"/><circle cx="20" cy="72" r="3"/><circle cx="7" cy="31" r="3"/>
+                <circle cx="59" cy="36" r="3"/><circle cx="52" cy="56" r="3"/><circle cx="32" cy="56" r="3"/><circle cx="25" cy="36" r="3"/>
+                <circle cx="42" cy="24" r="3.6" fill="#9b1c1c"/>
+              </g>
+            </svg>
+            <h3>Combinatorics</h3>
+            <p>Graph theory and combinatorics, from the Cycle Double Cover Conjecture to challenge problems that scale in difficulty.</p>
           </article>
-          <article class="research-card accent-card">
-            <div class="card-top"><span>Project QEDAI</span><b>02</b></div>
-            <div class="formal-mark" aria-hidden="true"><code>informal</code><span>→</span><code>theorem</code><span>→</span><code>verified</code></div>
-            <h3>An autoformalizer for mathematics</h3>
-            <p>QEDAI is a neuro-symbolic architecture for automated theorem proving in Lean 4. Starting from informal mathematical text—theorem statements and proof sketches from research papers—it orchestrates LLM-based code generation with structured proof search to produce complete, kernel-verified proofs. In short: human-readable mathematics in, machine-checked Lean 4 proofs out.</p>
+          <article class="pillar">
+            <svg viewBox="0 0 120 84" preserveAspectRatio="xMinYMid meet" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1.2">
+                <rect x="4" y="8" width="58" height="68"/>
+                <path d="M12,22H50M12,32H44M12,42H52M12,52H38M12,62H46" stroke-opacity=".4"/>
+              </g>
+              <g stroke="currentColor" stroke-width="2.4" fill="none">
+                <path d="M80,22V62M80,42H106"/>
+              </g>
+              <path d="M88,52l6,6l12,-14" fill="none" stroke="#9b1c1c" stroke-width="2.6"/>
+            </svg>
+            <h3>Lean 4</h3>
+            <p>Formalising combinatorial proofs in Lean&nbsp;4 and Mathlib, so that every step is checked by the Lean kernel.</p>
+          </article>
+          <article class="pillar">
+            <svg viewBox="0 0 120 84" preserveAspectRatio="xMinYMid meet" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="1" stroke-opacity=".35">
+                <path d="M8,14L40,8M8,14L40,31M8,14L40,54M8,14L40,77M8,42L40,8M8,42L40,31M8,42L40,54M8,42L40,77M8,70L40,8M8,70L40,31M8,70L40,54M8,70L40,77"/>
+                <path d="M40,8L72,22M40,8L72,62M40,31L72,22M40,31L72,62M40,54L72,22M40,54L72,62M40,77L72,22M40,77L72,62"/>
+              </g>
+              <path d="M72,22L99,40M72,62L99,44" fill="none" stroke="#9b1c1c" stroke-width="1.4"/>
+              <g fill="currentColor">
+                <circle cx="8" cy="14" r="3"/><circle cx="8" cy="42" r="3"/><circle cx="8" cy="70" r="3"/>
+                <circle cx="40" cy="8" r="3"/><circle cx="40" cy="31" r="3"/><circle cx="40" cy="54" r="3"/><circle cx="40" cy="77" r="3"/>
+                <circle cx="72" cy="22" r="3"/><circle cx="72" cy="62" r="3"/>
+              </g>
+              <rect x="99" y="36" width="12" height="12" fill="#9b1c1c"/>
+            </svg>
+            <h3>AI</h3>
+            <p>Language models combined with proof search and verification, aimed at automated reasoning that can be audited.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="focus wrap">
-      <p class="section-number">02 / Research focus</p>
-      <div class="focus-grid">
-        <h2>Connecting structures,<br>learning, and proof.</h2>
-        <div class="focus-list">
-          <div><span>01</span><h3>Graph Theory</h3><p>Combinatorial structures, graph properties, and research-level mathematical formalization.</p></div>
-          <div><span>02</span><h3>Graph Neural Networks</h3><p>Learning over relational and geometric structures with graph-based deep learning.</p></div>
-          <div><span>03</span><h3>Formal Mathematics</h3><p>Lean 4 formalization, autoformalization, theorem proving, and verifier-guided reasoning.</p></div>
+    <!-- ============ EXPLORE ============ -->
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="label">Explore</p>
+          <h2>Work and writing</h2>
+        </header>
+
+        <div class="explore">
+          <a class="explore-card reveal" href="publications.html">
+            <p class="label">Publications<span>01</span></p>
+            <h3>Papers and formalisations</h3>
+            <p>A Lean&nbsp;4 formalisation of OpenAI’s proof of the Cycle Double Cover Conjecture, a public benchmark of ten scalable challenges in combinatorics, and my Master’s thesis on automated theorem proving.</p>
+            <span class="go">Read the publications →</span>
+          </a>
+          <a class="explore-card reveal" href="research.html">
+            <p class="label">Research Collaboration<span>02</span></p>
+            <h3>Four research prototypes</h3>
+            <p>QEDAI, QEDSoft, Quantum_QED and AxiomVest pair language models, simulation and statistics with a Lean&nbsp;4 layer that checks what they produce.</p>
+            <span class="go">See the prototypes →</span>
+          </a>
+          <a class="explore-card reveal" href="author-editor.html">
+            <p class="label">Author &amp; Editor<span>03</span></p>
+            <h3>Books</h3>
+            <p>An authored book on IIT-JEE Advanced mathematics, and two edited volumes: one on computing and data science, one on intelligent imaging.</p>
+            <span class="go">See the books →</span>
+          </a>
+          <a class="explore-card reveal" href="awards.html">
+            <p class="label">Awards &amp; Recognitions<span>04</span></p>
+            <h3>Recognition</h3>
+            <p>Recognition for writing, mentoring and applied AI, including a certificate of achievement from the Urban Vision Hackathon 2025.</p>
+            <span class="go">See the awards →</span>
+          </a>
+        </div>
+
+        <div class="cta-box reveal">
+          <div>
+            <h3>Get in touch</h3>
+            <p>Write to <a href="mailto:vaibhav.bajpai@math.tu-freiberg.de">vaibhav.bajpai@math.tu-freiberg.de</a> or <a href="mailto:vaibhavkubic@gmail.com">vaibhavkubic@gmail.com</a>.</p>
+          </div>
+          <div class="ctas">
+            <a class="btn" href="mailto:vaibhav.bajpai@math.tu-freiberg.de">Email ↗</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/vaibhavbaj">LinkedIn ↗</a>
+          </div>
         </div>
       </div>
-    </section>
-
-    <section class="content-section wrap intro-qualifications" id="qualifications">
-      <p class="section-number">03 / Qualifications</p>
-      <div class="section-split"><h2>Qualifications</h2><div class="qualification-grid">
-        <article><span>2026—Present</span><h3>Ph.D. in Mathematics and Computer Science</h3><p>TU Bergakademie Freiberg (TUBAF) · ProofBench and neural-symbolic reasoning</p></article>
-        <article><span>2023—2025</span><h3>M.Tech. in Artificial Intelligence &amp; Machine Learning</h3><p>BITS Pilani (WILP)</p></article>
-        <article><span>2022—2023</span><h3>Integrated Program in Business Analytics (IPBA)</h3><p>IIM Indore</p></article>
-        <article><span>2020—2022</span><h3>M.Sc. in Physics</h3><p>Statistical Physics · Group Theory · Molecular Spectroscopy</p></article>
-        <article><span>2007—2009</span><h3>M.Sc. in Mathematics</h3><p>Optimization · Graph Theory · Linear Algebra · Statistics</p></article>
-      </div></div>
-    </section>
-
-    <section class="career wrap" id="experience">
-      <p class="section-number">04 / Professional Experience</p>
-      <div class="experience-list">
-        <article><span>Dec 2011 — Jan 2026</span><div><h3>Head of Department of Mathematics and AI</h3><h4>IITians Prashikshan Kendra Pvt. Ltd. · Pune</h4><p>Implemented an AI-driven student testing and automated doubt-resolution platform. Supervised curriculum standardization for IIT-JEE and Mathematical Olympiad training, and mentored faculty on integrating machine learning and statistical methods into assessment practices.</p></div></article>
-        <article><span>Aug 2025 — Jan 2026</span><div><h3>Mathematical AI Evaluator · Part-time</h3><h4>Mercer</h4><p>Tested frontier large language models on complex mathematical datasets.</p></div></article>
-        <article><span>May 2025 — Jul 2025</span><div><h3>LLM Evaluation Contractor · Part-time</h3><h4>Turing.com</h4><p>Designed adversarial tests for LLM robustness on mathematical datasets, including HLE and STEM PDP.</p></div></article>
-        <article><span>Jan 2009 — Oct 2011</span><div><h3>Academic Head</h3><h4>Yukti Educational Services · Pune</h4><p>Led academic operations, developed curricula, and taught advanced Mathematics.</p></div></article>
-      </div>
-    </section>
-
-    <section class="awards wrap" id="awards">
-      <p class="section-number">05 / Awards &amp; Recognitions</p>
-      <div class="awards-grid">
-        <article><span>01</span><h3>Celebrated Author</h3><p>Recognized by Endemol in 2022 as one of seven celebrated authors.</p></article>
-        <article><span>02</span><h3>Panel Speaker</h3><p>Speaker at the Shiksha Panel Discussion for Shiksha.com.</p></article>
-        <article><span>03</span><h3>AIR-1 Mentorship</h3><p>Mentored AIR-1 in IIT-JEE Mains 2015, acknowledged in The Times of India.</p></article>
-      </div>
-    </section>
-
-    <section class="next-page wrap">
-      <p>Continue to publications, AI products, projects, and blogs.</p>
-      <a href="work.html"><span>Work &amp; writing</span><b>→</b></a>
     </section>
   </main>
 
-  <footer><div class="wrap"><span>© <span id="year"></span> Vaibhav Bajpai</span><span>Mathematics · AI · Formal Verification</span><a href="mailto:vaibhavkubic@gmail.com">Email ↗</a></div></footer>
-  <script src="script.js"></script>
+  <footer class="footer">
+    <span>© <span data-year>2026</span> Vaibhav Bajpai · TU Bergakademie Freiberg</span>
+    <nav aria-label="Footer">
+      <a href="mailto:vaibhav.bajpai@math.tu-freiberg.de">Email</a>
+      <a href="https://github.com/vaibhav-baj">GitHub</a>
+      <a href="https://www.linkedin.com/in/vaibhavbaj">LinkedIn</a>
+    </nav>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
-

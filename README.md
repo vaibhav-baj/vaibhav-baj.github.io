@@ -1,15 +1,37 @@
-# Vaibhav Bajpai — Academic Portfolio
+# Vaibhav Bajpai — Academic Homepage
 
-A responsive academic portfolio documenting research in graph theory, graph neural networks, formal mathematics, automated theorem proving, publications, credentials, and applied AI systems.
+Personal website of Vaibhav Bajpai, PhD student at the Institute of Discrete Mathematics and Algebra,
+TU Bergakademie Freiberg. A plain static site (HTML, CSS, vanilla JavaScript) styled after the ProofBench
+site: Computer Modern type, black and white, hairline borders and one dark-red accent. There is no build step.
 
-## Run locally
+## Pages
 
-Open `index.html` directly, or serve the folder with any static web server.
+| File | Page |
+|---|---|
+| `index.html` | Home: introduction, research interests, links to every page, contact |
+| `publications.html` | Papers and the Master's thesis |
+| `research.html` | Research Collaboration: QEDAI, QEDSoft, Quantum_QED, AxiomVest |
+| `author-editor.html` | Authored book, edited volumes, reviewing |
+| `awards.html` | Awards & Recognitions, with certificates |
+| `work.html` | Redirect from the old address to `publications.html` |
 
-```powershell
-npx serve .
+## Layout
+
+```
+assets/css/style.css   shared design
+assets/js/main.js      Lean highlighting, scroll reveal, footer year
+assets/fonts/          Computer Modern Unicode (CMU Serif, CMU Typewriter), woff2, SIL OFL (see OFL.txt)
+assets/VB.png          portrait
+assets/*.jpeg          certificates
+```
+
+## Preview locally
+
+```sh
+python -m http.server 8000
+# open http://localhost:8000
 ```
 
 ## Deployment
 
-The canonical production site is deployed on Vercel. The `codex/academic-portfolio` branch also deploys automatically to GitHub Pages through `.github/workflows/pages.yml`.
+Pushing to the `codex/academic-portfolio` branch deploys to GitHub Pages through `.github/workflows/pages.yml`.
