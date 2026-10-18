@@ -22,8 +22,9 @@ site: Computer Modern type, black and white, hairline borders and one dark-red a
 assets/css/style.css   shared design
 assets/js/main.js      Lean highlighting, scroll reveal, footer year
 assets/fonts/          Computer Modern Unicode (CMU Serif, CMU Typewriter), woff2, SIL OFL (see OFL.txt)
-assets/VB.png          portrait
-assets/*.jpeg          certificates
+assets/Photo.jpeg      portrait
+assets/certificate-*, assets/SEG-Workshop.jpeg   certificates
+assets/book-accelerator-cover.jpg              book cover
 ```
 
 ## Preview locally
