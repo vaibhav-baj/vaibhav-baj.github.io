@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benchmark Evaluation · Vaibhav Bajpai</title>
+  <meta name="description" content="QEDRank: evaluate language models on corpora of formal mathematics problems with Lean-verified, statistically analysed results, or compare Lean formalisation benchmarks with each other.">
+  <meta property="og:title" content="Benchmark Evaluation · Vaibhav Bajpai">
+  <meta property="og:image" content="https://vaibhav-baj.github.io/assets/VB.png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cmunrm.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <a class="brand" href="index.html"><span class="qed" aria-hidden="true"></span>Vaibhav Bajpai</a>
+    <nav aria-label="Main">
+      <ul class="header-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="research.html">Research Collaboration</a></li>
+        <li><a href="benchmark.html" aria-current="page">Benchmark Evaluation</a></li>
+        <li><a href="author-editor.html">Author &amp; Editor</a></li>
+        <li><a href="awards.html">Awards</a></li>
+        <li><a class="btn btn-small" href="mailto:vaibhav.bajpai@math.tu-freiberg.de">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="main">
+    <section class="page-intro">
+      <h1>Benchmark Evaluation</h1>
+      <p>
+        QEDRank is a benchmark evaluation platform for formal mathematics. It measures how well language models
+        solve a selected corpus of formal mathematics problems, with Lean-verified, statistically analysed
+        results, and it compares Lean formalisation benchmarks with each other.
+      </p>
+      <div class="ctas page-ctas">
+        <a class="btn" href="https://qedrank.vercel.app/">Open QEDRank ↗</a>
+      </div>
+      <ul class="subnav">
+        <li><a href="#workflows">Workflows</a></li>
+        <li><a href="#more">More tools</a></li>
+        <li><a href="#reporting">How results are reported</a></li>
+      </ul>
+    </section>
+
+    <h2 class="rule" id="workflows">Two workflows</h2>
+    <div class="workflows">
+      <article class="workflow reveal">
+        <p class="wf-glyph" aria-hidden="true">∀</p>
+        <p class="label">Workflow 1</p>
+        <h3>Evaluate Models</h3>
+        <p>
+          Run one or more language models on a selected benchmark corpus. Each model generates Lean&nbsp;4
+          formalisations, the Lean compiler verifies them, and the models are compared on correctness,
+          reliability, efficiency and difficulty.
+        </p>
+        <ul class="wf-list" aria-label="Measures">
+          <li>Lean compilation success</li>
+          <li>Verified proof rate</li>
+          <li>Statement fidelity</li>
+          <li>Pass@1 and Pass@k performance</li>
+          <li>Error types and failure patterns</li>
+          <li>Latency and token usage</li>
+          <li>Cost and resource consumption</li>
+          <li>Performance by difficulty and subject area</li>
+        </ul>
+        <a class="btn btn-secondary" href="https://qedrank.vercel.app/benchmark">Open Evaluate Models ↗</a>
+      </article>
+
+      <article class="workflow reveal">
+        <p class="wf-glyph" aria-hidden="true">∃</p>
+        <p class="label">Workflow 2</p>
+        <h3>Compare Benchmarks</h3>
+        <p>
+          Set Lean formalisation benchmarks side by side, such as miniF2F, ProofNet, PutnamBench, FormalMATH,
+          CombiBench and ProofBench, to understand their scope, difficulty, coverage and model performance.
+        </p>
+        <ul class="wf-list" aria-label="Comparison areas">
+          <li>Number of problems</li>
+          <li>Mathematical domain coverage</li>
+          <li>Difficulty distribution</li>
+          <li>Theorem and proof types</li>
+          <li>Formalization language and Lean version</li>
+          <li>Model performance across datasets</li>
+        </ul>
+        <a class="btn btn-secondary" href="https://qedrank.vercel.app/versus">Open Compare Benchmarks ↗</a>
+      </article>
+    </div>
+
+    <h2 class="rule" id="more">More tools</h2>
+    <ul class="records">
+      <li class="reveal">
+        <span class="rec-type">Landscape</span>
+        <div>
+          <h3>Benchmark Landscape</h3>
+          <p>ProofBench and the Lean benchmarks on one chart: benchmark size against the best reported success rate.</p>
+          <a class="more-link" href="https://qedrank.vercel.app/compare">Open Benchmark Landscape ↗</a>
+        </div>
+      </li>
+      <li class="reveal">
+        <span class="rec-type">Single problem</span>
+        <div>
+          <h3>Convert a Problem</h3>
+          <p>Send one statement to every selected model and compare the Lean&nbsp;4 answers side by side, with latency, tokens and your own rating.</p>
+          <a class="more-link" href="https://qedrank.vercel.app/convert">Open Convert a Problem ↗</a>
+        </div>
+      </li>
+    </ul>
+
+    <h2 class="rule" id="reporting">How results are reported</h2>
+    <div class="prose">
+      <ul>
+        <li>A challenge file states the theorem and leaves its proof as <code>sorry</code>. That <code>sorry</code> is the task, and every answer is checked against the untouched statement.</li>
+        <li>Verified success is the strict primary endpoint: the answer compiles, uses no <code>sorry</code> and no new axioms, and leaves the statement unchanged.</li>
+        <li>Every rate is reported as numerator over eligible denominator at pass@1, with a 95% paper-cluster bootstrap interval.</li>
+        <li>Statement fidelity, compilation and audit are reported alongside verified success and are never folded into one score. No weighted composite is computed.</li>
+      </ul>
+    </div>
+    <div class="code-block">
+      <pre><code data-lean>-- Prove that the square root of 2 is irrational.
+theorem sqrt_two_irrational : Irrational (√2) := by
+  sorry</code></pre>
+    </div>
+    <p class="code-caption">An illustrative challenge file. The statement is fixed; a model has to replace the sorry with a proof that Lean accepts.</p>
+
+    <div class="cta-box spaced reveal">
+      <div>
+        <h3>Try QEDRank</h3>
+        <p>Evaluate models or compare benchmarks in the browser.</p>
+      </div>
+      <a class="btn" href="https://qedrank.vercel.app/">Open QEDRank ↗</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>© <span data-year>2026</span> Vaibhav Bajpai · TU Bergakademie Freiberg</span>
+    <nav aria-label="Footer">
+      <a href="mailto:vaibhav.bajpai@math.tu-freiberg.de">Email</a>
+      <a href="https://github.com/vaibhav-baj">GitHub</a>
+      <a href="https://www.linkedin.com/in/vaibhavbaj">LinkedIn</a>
+    </nav>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

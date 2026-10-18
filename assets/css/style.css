@@ -93,6 +93,7 @@ h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
 .tok-num { color: #b9d69a; }
 .tok-sym { color: #d9b8f0; }
 .tok-com { color: var(--code-dim); font-style: italic; }
+.tok-sorry { color: #f2c14e; text-decoration: underline wavy rgba(242, 193, 78, .55); text-underline-offset: 4px; }
 
 /* ---------- footer ---------- */
 .footer {
@@ -144,6 +145,7 @@ h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
 .explore { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 .explore-card { display: flex; flex-direction: column; border: 1px solid var(--ink); background: var(--bg); color: var(--ink); padding: 26px 28px 28px; transition: transform .2s ease, box-shadow .2s ease; }
 .explore-card:hover { text-decoration: none; transform: translateY(-3px); box-shadow: 0 14px 30px -18px rgba(0, 0, 0, .45); }
+.explore-card.wide { grid-column: 1 / -1; }
 .explore-card .label { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
 .explore-card .label span { color: var(--muted); }
 .explore-card h3 { font-size: 24px; font-weight: 400; margin: 0 0 10px; }
@@ -189,6 +191,25 @@ h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
 .project-actions { margin-top: 20px; }
 
 /* ======================================================================
+   BENCHMARK EVALUATION
+   ====================================================================== */
+.page-ctas { margin: 22px 0 0; }
+.workflows { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.workflow { display: flex; flex-direction: column; border: 1px solid var(--ink); background: var(--bg); padding: 26px 28px 28px; }
+.workflow > * { min-width: 0; }
+.wf-glyph { font-size: 44px; line-height: 1; color: var(--accent); margin-bottom: 14px; }
+.workflow .label { margin-bottom: 6px; }
+.workflow h3 { font-size: 24px; font-weight: 400; margin: 0 0 10px; }
+.workflow > p:not(.label):not(.wf-glyph) { font-size: 15.5px; color: #333; }
+.wf-list { list-style: none; margin: 18px 0 24px; border-top: 1px solid var(--line); flex: 1; }
+.wf-list li { font-size: 14.5px; padding: 7px 0; border-bottom: 1px solid var(--line-soft); }
+.wf-list li::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--ink); margin-right: 12px; vertical-align: 2px; }
+.workflow .btn { align-self: flex-start; }
+.prose ul { margin: 0 0 8px 22px; max-width: 760px; }
+.prose li { margin-bottom: 10px; color: #222; }
+.cta-box.spaced { margin-top: 56px; }
+
+/* ======================================================================
    AUTHOR & EDITOR
    ====================================================================== */
 .book { display: grid; grid-template-columns: 1fr 210px; gap: 28px; align-items: start; border: 1px solid var(--line); border-left: 3px solid var(--ink); padding: 22px 24px; margin-bottom: 16px; background: var(--bg); transition: border-color .2s; }
@@ -205,6 +226,9 @@ h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
 .thumb:hover { text-decoration: none; border-color: var(--ink); transform: translateY(-2px); }
 .thumb img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .thumb span { display: block; font-family: var(--tt); font-size: 12px; padding: 6px 10px; border-top: 1px solid var(--line); }
+.book.has-cover { grid-template-columns: 1fr 160px; }
+.book h3 a:hover { color: var(--accent); }
+.thumb.cover img { aspect-ratio: auto; }
 
 /* ======================================================================
    AWARDS
@@ -221,6 +245,7 @@ h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
 .cert { display: flex; flex-direction: column; border: 1px solid var(--ink); background: var(--bg); color: var(--ink); transition: transform .2s ease, box-shadow .2s ease; }
 .cert:hover { text-decoration: none; transform: translateY(-3px); box-shadow: 0 14px 30px -18px rgba(0, 0, 0, .45); }
 .cert img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-bottom: 1px solid var(--ink); }
+.cert.portrait img { object-position: center top; }
 .cert div { padding: 16px 18px 18px; display: flex; flex-direction: column; flex: 1; }
 .cert .label { margin-bottom: 6px; }
 .cert h3 { font-size: 17px; line-height: 1.35; margin: 0 0 4px; }
@@ -255,7 +280,9 @@ h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
   .project-visual svg { max-width: 220px; }
   .book { grid-template-columns: 1fr; gap: 18px; }
   .thumb { max-width: 280px; }
-  .explore, .cert-grid { grid-template-columns: 1fr; }
+  .book.has-cover { grid-template-columns: 1fr; }
+  .thumb.cover { max-width: 170px; }
+  .explore, .cert-grid, .workflows { grid-template-columns: 1fr; }
   .records li { grid-template-columns: 1fr; }
 }
 

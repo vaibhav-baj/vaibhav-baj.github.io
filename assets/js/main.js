@@ -11,6 +11,7 @@
   const LEAN_TOKENS = new RegExp(
     [
       "(--[^\\n]*)",
+      "\\b(sorry)\\b",
       "\\b(theorem|lemma|def|by|fun|refine|exact|intro|obtain|have|show|let|letI|classical|in|where|with|match|Type|Prop)\\b",
       "([∀∃¬→↔∧∨≤≥≠⟨⟩↦≃∩∪⊆∈⊢∘↪<|]+|:=)",
       "\\b(\\d+)\\b",
@@ -18,7 +19,7 @@
     ].join("|"),
     "gu"
   );
-  const TOKEN_CLASS = ["tok-com", "tok-kw", "tok-sym", "tok-num", "tok-ty"];
+  const TOKEN_CLASS = ["tok-com", "tok-sorry", "tok-kw", "tok-sym", "tok-num", "tok-ty"];
   function highlightLean(src) {
     let out = "";
     let last = 0;

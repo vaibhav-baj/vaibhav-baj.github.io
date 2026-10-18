@@ -11,6 +11,7 @@ site: Computer Modern type, black and white, hairline borders and one dark-red a
 | `index.html` | Home: introduction, research interests, links to every page, contact |
 | `publications.html` | Papers and the Master's thesis |
 | `research.html` | Research Collaboration: QEDAI, QEDSoft, Quantum_QED, AxiomVest |
+| `benchmark.html` | Benchmark Evaluation: QEDRank |
 | `author-editor.html` | Authored book, edited volumes, reviewing |
 | `awards.html` | Awards & Recognitions, with certificates |
 | `work.html` | Redirect from the old address to `publications.html` |
