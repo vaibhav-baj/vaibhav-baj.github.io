@@ -195,16 +195,16 @@ h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
    BENCHMARK EVALUATION
    ====================================================================== */
 .page-ctas { margin: 22px 0 0; }
-.workflows { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.workflows { display: grid; grid-template-columns: 1fr; gap: 24px; }
 .workflow { display: flex; flex-direction: column; border: 1px solid var(--ink); background: var(--bg); padding: 26px 28px 28px; }
 .workflow > * { min-width: 0; }
 .wf-glyph { font-size: 44px; line-height: 1; color: var(--accent); margin-bottom: 14px; }
 .workflow .label { margin-bottom: 6px; }
 .workflow h3 { font-size: 24px; font-weight: 400; margin: 0 0 10px; }
 .workflow > p:not(.label):not(.wf-glyph) { font-size: 15.5px; color: #333; }
-.wf-list { list-style: none; margin: 18px 0 24px; border-top: 1px solid var(--line); flex: 1; }
-.wf-list li { font-size: 14.5px; padding: 7px 0; border-bottom: 1px solid var(--line-soft); }
-.wf-list li::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--ink); margin-right: 12px; vertical-align: 2px; }
+.wf-list { list-style: none; margin: 18px 0 24px; border-top: 1px solid var(--line); columns: 2; column-gap: 36px; }
+.wf-list li { font-size: 14.5px; line-height: 1.5; padding: 7px 0 7px 18px; border-bottom: 1px solid var(--line-soft); position: relative; break-inside: avoid; }
+.wf-list li::before { content: ""; position: absolute; left: 0; top: 14px; width: 6px; height: 6px; background: var(--ink); }
 .workflow .btn { align-self: flex-start; }
 .prose ul { margin: 0 0 8px 22px; max-width: 760px; }
 .prose li { margin-bottom: 10px; color: #222; }
@@ -299,6 +299,7 @@ h3 { font-size: 17px; font-weight: 700; margin: 26px 0 10px; }
   .stats dd { font-size: 36px; }
   .section { padding-top: 72px; padding-bottom: 72px; }
   .pub { grid-template-columns: 1fr; padding-left: 10px; }
+  .wf-list { columns: 1; }
   .pub-num { padding: 0 0 4px; }
   .project-body { padding: 22px 20px 24px; }
   .book { padding: 18px 16px; }

@@ -57,19 +57,24 @@
         <p class="label">Workflow 1</p>
         <h3>Evaluate Models</h3>
         <p>
-          Run one or more language models on a selected benchmark corpus. Each model generates Lean&nbsp;4
-          formalisations, the Lean compiler verifies them, and the models are compared on correctness,
-          reliability, efficiency and difficulty.
+          Run one or more language models on a selected Lean&nbsp;4 benchmark corpus. Each model generates
+          formalizations, which are checked by Lean and compared using correctness, auditability, reliability,
+          efficiency, and difficulty-based performance.
         </p>
         <ul class="wf-list" aria-label="Measures">
-          <li>Lean compilation success</li>
-          <li>Verified proof rate</li>
-          <li>Statement fidelity</li>
-          <li>Pass@1 and Pass@k performance</li>
-          <li>Error types and failure patterns</li>
-          <li>Latency and token usage</li>
-          <li>Cost and resource consumption</li>
+          <li><b>Verified proof rate (pass@1)</b> — primary metric</li>
+          <li>Audit-clean rate — proofs passing axiom and forbidden-import checks</li>
+          <li>Lean compilation success rate</li>
+          <li>Statement fidelity rate</li>
+          <li>Statement-match classification</li>
+          <li>Pass@k performance for k = 1–16</li>
+          <li>Attempt statuses and failure classes</li>
+          <li>Abstention, timeout, unresolved, and infrastructure-error rates</li>
+          <li>Latency, Lean compilation time, and token usage</li>
+          <li>Estimated cost per attempt and per verified proof</li>
           <li>Performance by difficulty and subject area</li>
+          <li>Performance on the common-problem subset</li>
+          <li>95% confidence intervals and exact denominators</li>
         </ul>
         <a class="btn btn-secondary" href="https://qedrank.vercel.app/benchmark">Open Evaluate Models ↗</a>
       </article>
@@ -79,16 +84,28 @@
         <p class="label">Workflow 2</p>
         <h3>Compare Benchmarks</h3>
         <p>
-          Set Lean formalisation benchmarks side by side, such as miniF2F, ProofNet, PutnamBench, FormalMATH,
-          CombiBench and ProofBench, to understand their scope, difficulty, coverage and model performance.
+          Compare Lean formalization benchmarks side by side to understand their scope, mathematical coverage,
+          difficulty, statement quality, proof complexity, and model performance.
         </p>
         <ul class="wf-list" aria-label="Comparison areas">
-          <li>Number of problems</li>
-          <li>Mathematical domain coverage</li>
-          <li>Difficulty distribution</li>
-          <li>Theorem and proof types</li>
-          <li>Formalization language and Lean version</li>
-          <li>Model performance across datasets</li>
+          <li>Number of problems as published</li>
+          <li>Number of problems measured</li>
+          <li>Release date, source, task type, and judging method</li>
+          <li>Mathematical domain and MSC subject coverage</li>
+          <li>Largest subject area</li>
+          <li>Difficulty-level distribution</li>
+          <li>Research-level and open-problem share</li>
+          <li>Theorem, definition, lemma, and construction-problem types</li>
+          <li>Theorem signature complexity</li>
+          <li>Statement length, including used definitions</li>
+          <li>Longest 10% of statements by token length</li>
+          <li>Theorems per file and definitions per file</li>
+          <li>Reference-proof availability and quality</li>
+          <li>Proof length, proof-term size, tactics, and automation share</li>
+          <li>Statements with contradictory or vacuous hypotheses</li>
+          <li>Linter warnings and reference defects</li>
+          <li>Model verified-proof rate by benchmark</li>
+          <li>Coverage differences between models and benchmarks</li>
         </ul>
         <a class="btn btn-secondary" href="https://qedrank.vercel.app/versus">Open Compare Benchmarks ↗</a>
       </article>
@@ -133,7 +150,7 @@ theorem sqrt_two_irrational : Irrational (√2) := by
     <div class="cta-box spaced reveal">
       <div>
         <h3>Try QEDRank</h3>
-        <p>Evaluate models or compare benchmarks in the browser.</p>
+        <p>Evaluate models or compare benchmarks in the browser at <a href="https://qedrank.vercel.app/">qedrank.vercel.app</a>.</p>
       </div>
       <a class="btn" href="https://qedrank.vercel.app/">Open QEDRank ↗</a>
     </div>
