@@ -14,6 +14,7 @@ site: Computer Modern type, black and white, hairline borders and one dark-red a
 | `benchmark.html` | Benchmark Evaluation: QEDRank |
 | `author-editor.html` | Authored book, edited volumes, reviewing |
 | `awards.html` | Awards & Recognitions, with certificates |
+| `resume.html` | Resume: the PDF embedded from Google Drive, with open and download links |
 | `work.html` | Redirect from the old address to `publications.html` |
 
 ## Layout
