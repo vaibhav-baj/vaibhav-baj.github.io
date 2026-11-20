@@ -1,4 +1,4 @@
-// Shared behaviour for every page: Lean highlighting, scroll reveal and the footer year.
+// Shared behaviour for every page: Lean highlighting, scroll reveal, publication count and the footer year.
 (() => {
   "use strict";
   document.documentElement.classList.add("js");
@@ -48,6 +48,20 @@
       });
     }, { rootMargin: "0px 0px -6% 0px" });
     items.forEach((el) => reveal.observe(el));
+  }
+
+  /* publication count: the home page counts the papers listed on publications.html.
+     The number in the HTML is the fallback if that page cannot be fetched. */
+  const pubCounters = $$("[data-pub-count]");
+  if (pubCounters.length && "fetch" in window) {
+    fetch("publications.html", { cache: "no-cache" })
+      .then((r) => (r.ok ? r.text() : Promise.reject(new Error(r.status))))
+      .then((page) => {
+        const doc = new DOMParser().parseFromString(page, "text/html");
+        const n = doc.querySelectorAll("#papers + .pubs > .pub").length;
+        if (n > 0) pubCounters.forEach((el) => { el.textContent = n; });
+      })
+      .catch(() => {});
   }
 
   /* footer year */
